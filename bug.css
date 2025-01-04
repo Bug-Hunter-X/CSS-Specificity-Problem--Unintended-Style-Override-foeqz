@@ -1,0 +1,17 @@
+The following CSS code snippet demonstrates a common issue with specificity and inheritance.  The intention is to style the `.item` class, but the `.container .item` selector is unintentionally overriding it due to higher specificity:
+
+```css
+.item {
+  color: blue;
+}
+
+.container .item {
+  color: red;
+}
+
+.container {
+  width: 200px;
+}
+```
+
+When an element with the class `item` is inside an element with the class `container`, it will display the text in red, not blue, which might be unexpected.
